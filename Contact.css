@@ -1,0 +1,115 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+}
+
+.contact__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.contact__text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.contact__methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.method-card {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--transition-fast);
+}
+
+.method-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(8px);
+}
+
+.method-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.method-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.method-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.method-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Form */
+.contact__form-wrapper {
+  padding: 40px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.w-full { width: 100%; margin-top: 10px; }
+
+@media (max-width: 900px) {
+  .contact__grid { grid-template-columns: 1fr; }
+  .method-card:hover { transform: translateY(-4px); }
+  .contact__form-wrapper { padding: 32px 24px; }
+}
